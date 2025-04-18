@@ -2,14 +2,14 @@
 def get_hr_score(barrel_rate, exit_velocity, xSLG, sweet_spot, rpi,
                  hr9, hard_hit_pct, fatigue,
                  park_factor, wind_boost, temp_boost):
-    # Original model: untouched formula
+    # Modified BPS (no /5)
     bps = (
         barrel_rate * 2.0 +
         exit_velocity * 0.5 +
         xSLG * 100 +
         sweet_spot * 0.5 +
         rpi * 100
-    ) / 5
+    )
 
     pvs = (
         hr9 * 30 +
